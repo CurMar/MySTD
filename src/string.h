@@ -3,5 +3,6 @@
 #include <stdio.h>
 void my_memcpy(void *, const void *, size_t);
 void my_memmove(void *, const void *, size_t);
+void *my_memchr(const char *, char, size_t);
 
 #endif

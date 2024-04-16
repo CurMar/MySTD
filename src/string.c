@@ -25,5 +25,17 @@ void my_memmove(void *dest, const void *src, size_t n)
     for (size_t i = 0; i < n; ++i)
         ((char *)dest)[i] = buf[i];
 
-        free(buf);
+    free(buf);
+}
+
+void *my_memchr(const char *s, char c, size_t n)
+{
+    if (!s || !n)
+        return NULL;
+
+    while (n-- > 0)
+        if (*s++ == c)
+            return (void *)(s - 1);
+
+    return NULL;
 }
