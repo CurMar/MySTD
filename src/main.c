@@ -9,9 +9,9 @@ int main(int argc, char *argv[])
     printf("===HELLO===\n");
 
     char a[] = {'q', 'q', 'e', 'r', 't'};
-    char b[10];
+    char b[] = {'a', 'q', 'e', 'r', 't'};
 
-    char *c = my_memchr(a, 'q', 4);
-    printf("%d", c - a);
+    my_memset(a, 'g', 2);
+    printf("%c", a[1]);
     return 0;
 }

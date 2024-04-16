@@ -51,3 +51,12 @@ int my_memcmp(const char *s1, const char *s2, size_t n)
 
     return 0;
 }
+
+void my_memset(char *dest, char value, size_t n)
+{
+    if (!dest)
+        return;
+
+    while (n-- > 0)
+        *dest++ = value;
+}
