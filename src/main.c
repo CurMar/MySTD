@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     char a[] = {'q', 'q', 'e', 'r', 't'};
     char b[10];
 
-    my_memcpy(b, a, 4);
+    my_memmove(b, a, 4);
     printf("%c", b[2]);
     return 0;
 }
