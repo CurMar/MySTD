@@ -60,3 +60,19 @@ void my_memset(char *dest, char value, size_t n)
     while (n-- > 0)
         *dest++ = value;
 }
+
+void *my_strcat(char *dest, const char *src)
+{
+    if (!dest || !src)
+        return NULL;
+    for (size_t i = my_strlen(dest) - 1; i < my_strlen(dest) + my_strlen(src); ++i)
+        dest[i] = *src++;
+}
+
+size_t my_strlen(const char *str)
+{
+    size_t l = 0;
+    while (str[l++])
+        ;
+    return l;
+}
