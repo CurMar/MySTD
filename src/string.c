@@ -46,12 +46,19 @@ void my_memset(char *dest, char value, size_t n)
         *dest++ = value;
 }
 
-void *my_strcat(char *dest, const char *src)
+void my_strcat(char *dest, const char *src)
 {
     for (size_t i = my_strlen(dest) - 1; i < my_strlen(dest) + my_strlen(src); ++i)
         dest[i] = *src++;
 }
+void my_strncat(char *dest, const char *src, size_t n)
+{
+    dest += my_strlen(dest) - 1;
+    while (n-- > 0)
+        *dest++ = *src++;
 
+    *dest = '\0';
+}
 size_t my_strlen(const char *str)
 {
     size_t l = 0;
