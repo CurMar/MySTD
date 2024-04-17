@@ -66,3 +66,12 @@ size_t my_strlen(const char *str)
         ;
     return l;
 }
+
+char *my_strchr( char *s, int c)
+{
+    while (*s)
+        if (*s++ == c)
+            return s;
+
+    return NULL;
+}

@@ -9,4 +9,5 @@ void my_memset(char *, char, size_t);
 void my_strcat(char *, const char *);
 void my_strncat(char *, const char *, size_t n);
 size_t my_strlen(const char *);
+char *my_strchr(char *, int);
 #endif
