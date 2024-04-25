@@ -6,4 +6,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 add_custom_target(run COMMAND ${CMAKE_SOURCE_DIR}/bin/proga)
 
-add_executable(proga src/main.c src/string.c)
+add_executable(proga src/main.c src/string.c src/stdlib.c)
